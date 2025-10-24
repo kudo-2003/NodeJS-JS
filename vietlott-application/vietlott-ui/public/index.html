@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Vietlott — Kiểm tra vé</title>
+  <link rel="stylesheet" href="/assets/main.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="app-header">
+      <h1>Vietlott — Kiểm tra vé</h1>
+      <div class="controls">
+        <label class="switch" title="Hiển thị / ẩn lịch sử">
+          <input class="togglesw" id="showHistoryToggle" type="checkbox" checked>
+          <div class="indicator left"></div>
+          <div class="indicator right"></div>
+          <div class="button"></div>
+        </label>
+        <span class="toggle-label">Xem lịch sử</span>
+      </div>
+    </header>
+
+    <main class="app-main">
+      <section class="panel panel-form">
+        <form id="checkForm">
+          <input id="ticket" placeholder="Nhập mã vé..." required />
+          <button type="submit">Kiểm tra</button>
+        </form>
+
+        <section id="result" class="card hidden"></section>
+      </section>
+
+      <aside id="history" class="panel panel-history card">
+        <h3>Lịch sử</h3>
+        <ul id="historyList"></ul>
+      </aside>
+    </main>
+  </div>
+
+  <script src="/app.js" defer></script>
+</body>
+</html>

@@ -5,10 +5,12 @@
   "license": "ISC",
   "author": "",
   "type": "commonjs",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node index.js"
+    "start:server": "node vietlott-server/index.js",
+    "start:ui": "PORT=4000 node vietlott-ui/app.js",
+    "dev": "npm run start:server"
   },
   "dependencies": {
     "express": "^5.1.0"
